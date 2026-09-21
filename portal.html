@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SPNHS School Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet">
+<link href="assets/css/icons.min.css" rel="stylesheet">
+<link href="assets/css/app.min.css" id="app-style" rel="stylesheet">
+</head>
+<body>
+<div id="layout-wrapper">
+  <header id="page-topbar">
+    <div class="navbar-header">
+      <div class="d-flex">
+        <div class="navbar-brand-box">
+          <a href="portal.html" class="logo logo-dark"><span class="logo-sm"><img src="assets/images/logo-sm.svg" alt="" height="24"></span><span class="logo-lg"><img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">SPNHS</span></span></a>
+          <a href="portal.html" class="logo logo-light"><span class="logo-sm"><img src="assets/images/logo-sm.svg" alt="" height="24"></span><span class="logo-lg"><img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">SPNHS</span></span></a>
+        </div>
+        <button type="button" class="btn btn-sm px-3 font-size-16 header-item" id="vertical-menu-btn"><i class="fa fa-fw fa-bars"></i></button>
+        <form class="app-search d-none d-lg-block" onsubmit="return false">
+          <div class="position-relative"><input type="text" class="form-control" placeholder="Search..."><button class="btn btn-primary" type="button"><i class="bx bx-search-alt align-middle"></i></button></div>
+        </form>
+      </div>
+      <div class="d-flex">
+        <div class="dropdown d-inline-block">
+          <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-account-switch font-size-18 me-1"></i><span class="d-none d-sm-inline">Switch role</span></button>
+          <div class="dropdown-menu dropdown-menu-end" id="roles"></div>
+        </div>
+        <a id="bell" class="btn header-item noti-icon position-relative"><i data-feather="bell" class="icon-lg"></i><span class="badge bg-danger rounded-pill" id="nb"></span></a>
+        <div class="dropdown d-inline-block">
+          <button type="button" class="btn header-item bg-light-subtle border-start border-end" data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="rounded-circle header-profile-user" id="av" alt="">
+            <span class="d-none d-xl-inline-block ms-1 fw-medium" id="who"></span>
+            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end">
+            <a class="dropdown-item" href="sign-in.html" onclick="localStorage.removeItem('eanhs_role')"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="vertical-menu">
+    <div data-simplebar class="h-100">
+      <div id="sidebar-menu"><ul class="metismenu list-unstyled" id="side-menu"></ul></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="page-content"><div class="container-fluid" id="view"></div></div>
+    <footer class="footer"><div class="container-fluid"><div class="row"><div class="col-sm-12">&copy; 2026 SPNHS School Portal. Prototype on sample data, nothing is saved.</div></div></div></footer>
+  </div>
+</div>
+
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+<script src="assets/libs/feather-icons/feather.min.js"></script>
+<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+<script src="assets/js/portal.js" charset="utf-8"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
